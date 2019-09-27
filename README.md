@@ -29,14 +29,12 @@
 #### Shell
 compile: 
 ```
-javac --module-path $JAVAFX_HOME --add-modules=javafx.controls,javafx.base,javafx.fxml,javafx.graphics,javafx.media,javafx.swing,javafx.web -d out $(find src -name "*.java")
+javac --module-path $JAVAFX_HOME --add-modules=javafx.controls,javafx.base,javafx.fxml,javafx.graphics,javafx.media,javafx.swing,javafx.web *.java
 
-cp $(find src -name "*.fxml") out/editor
-cp $(find src -name "*.css") out/editor
 ```
 run:
 ```
-java --module-path $JAVAFX_HOME --add-modules=javafx.controls,javafx.base,javafx.fxml,javafx.graphics,javafx.media,javafx.swing,javafx.web -cp out editor.Main`
+java --module-path $JAVAFX_HOME --add-modules=javafx.controls,javafx.base,javafx.fxml,javafx.graphics,javafx.media,javafx.swing,javafx.web ProgramEditor`
 ```
 Or simply use the compile.sh and run.sh included in the project
 #### IntelliJ
